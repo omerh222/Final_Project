@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ACTIVITIES.Prescriptions_Editing_and_adding_screen7">
+
+    <!-- Back Arrow -->
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main Container -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350dp"
+            android:layout_height="650dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/rounded_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Title -->
+
+            <!-- Med Name Row -->
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:text="New/Edit\nprescription"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMedNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:text="Med name:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <!-- Prescribing Doctor Row -->
+            <TextView
+                android:id="@+id/tvDoctorLabel"
+                android:layout_width="92dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Prescribing doctor:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMedNameLabel" />
+
+            <!-- Dosage Row -->
+
+            <!-- Frequency Row -->
+
+            <TextView
+                android:id="@+id/tvDosageLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Dosage:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDoctorLabel" />
+
+            <TextView
+                android:id="@+id/tvFrequencyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Frequency:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDosageLabel" />
+
+            <!-- Before/during/after eating Row -->
+
+            <!-- Life Saving Row -->
+
+            <TextView
+                android:id="@+id/tvEatingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="48dp"
+                android:text="Before/\nduring/after\neating?"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFrequencyLabel" />
+
+            <TextView
+                android:id="@+id/tvLifeSavingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="24dp"
+                android:text="Is the medication\nlife saving?"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEatingLabel" />
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/btnSavePrescription"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:text="Add/Edit Prescription"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="@+id/btnEditFrequency"
+                app:layout_constraintTop_toTopOf="@+id/tvEatingLabel" />
+
+            <EditText
+                android:id="@+id/editTextText2"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Enter doctor's name"
+                android:inputType="text"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/tvMedNameLabel" />
+
+            <EditText
+                android:id="@+id/editTextText"
+                android:layout_width="wrap_content"
+                android:layout_height="33dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Enter dosage"
+                android:inputType="text"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/editTextText2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/editTextText2"
+                app:layout_constraintTop_toBottomOf="@+id/tvDoctorLabel" />
+
+            <Button
+                android:id="@+id/btnEditFrequency"
+                android:layout_width="128dp"
+                android:layout_height="53dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="Add/Edit\nfrequency"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/editTextText"
+                app:layout_constraintTop_toTopOf="@+id/tvFrequencyLabel" />
+
+            <Button
+                android:id="@+id/btnEditFrequency2"
+                android:layout_width="64dp"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="No"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/editTextText"
+                app:layout_constraintTop_toTopOf="@+id/tvLifeSavingLabel" />
+
+            <Button
+                android:id="@+id/btnEditFrequency3"
+                android:layout_width="64dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:text="Yes"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/btnEditFrequency2"
+                app:layout_constraintTop_toTopOf="@+id/tvLifeSavingLabel" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="68dp"
+                android:text="TextView"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/tvMedNameLabel"
+                app:layout_constraintTop_toTopOf="@+id/tvMedNameLabel" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

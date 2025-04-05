@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "810529045347",
+    "project_id": "mediwallet-d13b6",
+    "storage_bucket": "mediwallet-d13b6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810529045347:android:15595f3c2774ad3571b156",
+        "android_client_info": {
+          "package_name": "com.omer_h.tashtit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxQ5KJL71pW6FJemgNtFA1Nfz8FjszPbQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

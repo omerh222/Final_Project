@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ACTIVITIES.Frequency_Settings_screen8">
+
+    <!-- Back Arrow -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back_button"
+        android:backgroundTint="@color/intenseRouge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Main Container -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="350dp"
+            android:layout_height="650dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/rounded_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintCircleRadius="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!-- Title -->
+
+            <!-- Med Name Row -->
+
+            <Button
+                android:id="@+id/btnSavePrescription2"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginStart="56dp"
+                android:layout_marginEnd="56dp"
+                android:layout_marginBottom="32dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:text="Add/Edit Frequency"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:gravity="center"
+                android:text="Frequency\nsettings"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMedNameLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Med name:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvFrequencyQuestion"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvMedName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Med name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/tvMedNameLabel"
+                app:layout_constraintEnd_toEndOf="@+id/tvFrequencyQuestion"
+                app:layout_constraintStart_toEndOf="@+id/tvMedNameLabel" />
+
+            <!-- Frequency Question -->
+            <TextView
+                android:id="@+id/tvFrequencyQuestion"
+                android:layout_width="249dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="32dp"
+                android:gravity="center"
+                android:text="When do you need to take this medicine?"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvMedNameLabel" />
+
+            <!-- Time Buttons - Top Row -->
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMorning"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:text="Morning"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnNoon"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFrequencyQuestion"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNoon"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:text="Noon"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnMorning"
+                app:layout_constraintTop_toTopOf="@+id/btnMorning"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <!-- Time Buttons - Bottom Row -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEvening"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:text="Evening"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnNight"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etNight3"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNight"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/intenseRouge"
+                android:text="Night"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnEvening"
+                app:layout_constraintTop_toTopOf="@+id/btnEvening"
+                app:layout_constraintWidth_percent="0.45" />
+
+            <!-- Time Input Fields -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMorningTime"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Morning time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnMorning"
+                app:layout_constraintStart_toStartOf="@+id/btnMorning"
+                app:layout_constraintTop_toBottomOf="@+id/btnEvening">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMorningTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNoonTime"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Noon time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnNoon"
+                app:layout_constraintStart_toStartOf="@+id/btnNoon"
+                app:layout_constraintTop_toBottomOf="@+id/btnNight">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNoonTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilEveningTime"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Evening time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnEvening"
+                app:layout_constraintStart_toStartOf="@+id/btnEvening"
+                app:layout_constraintTop_toBottomOf="@+id/tilMorningTime">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etEveningTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNightTime"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="Night time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnNight"
+                app:layout_constraintStart_toStartOf="@+id/btnNight"
+                app:layout_constraintTop_toBottomOf="@+id/tilNoonTime">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNightTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <EditText
+                android:id="@+id/etEvening"
+                android:layout_width="109dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnEvening"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="@+id/btnEvening"
+                app:layout_constraintTop_toBottomOf="@+id/btnEvening" />
+
+            <EditText
+                android:id="@+id/etNight"
+                android:layout_width="109dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnNight"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="@+id/btnNight"
+                app:layout_constraintTop_toBottomOf="@+id/btnNight" />
+
+            <EditText
+                android:id="@+id/etNight2"
+                android:layout_width="109dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnNoon"
+                app:layout_constraintHorizontal_bias="0.52"
+                app:layout_constraintStart_toStartOf="@+id/btnNoon"
+                app:layout_constraintTop_toBottomOf="@+id/btnNoon" />
+
+            <EditText
+                android:id="@+id/etNight3"
+                android:layout_width="109dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="28dp"
+                android:ems="10"
+                android:inputType="time"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/btnMorning"
+                app:layout_constraintHorizontal_bias="0.448"
+                app:layout_constraintStart_toStartOf="@+id/btnMorning"
+                app:layout_constraintTop_toBottomOf="@+id/btnMorning" />
+
+            <!-- Instruction Text -->
+
+            <!-- Set Frequency Button -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

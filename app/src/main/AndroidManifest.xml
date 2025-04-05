@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TASHTIT"
+        tools:targetApi="31">
+        <activity
+            android:name=".ACTIVITIES.Prescription_Details_screen12"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Alarm_Screen11"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Medication_Info_Screen10"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.My_Prescriptions_Screen9"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Frequency_Settings_screen8"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Prescriptions_Editing_and_adding_screen7"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Home_screen_6"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Update_Personal_Details_screen5"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Allergens_screen4"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.signIn_screen_3"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.Login_Screen_2"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.BASE.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ACTIVITIES.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

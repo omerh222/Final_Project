@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ACTIVITIES.Prescription_Details_screen12">
+
+    <!-- Back arrow at the top -->
+
+
+    <ImageButton
+        android:id="@+id/btnBack4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="650dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/rounded_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircleRadius="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Title -->
+
+        <!-- Med Name Label -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Prescription\ndetails"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Med Name Value -->
+
+        <TextView
+            android:id="@+id/medNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="40dp"
+            android:text="Med name:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+        <TextView
+            android:id="@+id/medNameValue"
+            android:layout_width="75dp"
+            android:layout_height="17dp"
+            android:text="Med name"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/medNameLabel"
+            app:layout_constraintStart_toStartOf="@+id/doctorValue"
+            app:layout_constraintTop_toTopOf="@id/medNameLabel" />
+
+        <!-- Prescribing Doctor Label -->
+
+        <!-- Doctor Value -->
+        <TextView
+            android:id="@+id/doctorLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Prescribing Dr."
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/medNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/medNameLabel" />
+
+        <TextView
+            android:id="@+id/doctorValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:text="Doc name"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/doctorLabel"
+            app:layout_constraintStart_toEndOf="@id/doctorLabel"
+            app:layout_constraintTop_toTopOf="@id/doctorLabel" />
+
+        <!-- Dosage Label -->
+
+        <!-- Dosage Value -->
+        <TextView
+            android:id="@+id/dosageLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Dosage:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/medNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/doctorLabel" />
+
+        <TextView
+            android:id="@+id/dosageValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="dosage"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/dosageLabel"
+            app:layout_constraintStart_toStartOf="@+id/doctorValue"
+            app:layout_constraintTop_toTopOf="@id/dosageLabel" />
+
+        <!-- Frequency Label -->
+
+        <!-- Observe Frequency Button -->
+        <TextView
+            android:id="@+id/frequencyLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Frequency:"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/medNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/dosageLabel" />
+
+        <Button
+            android:id="@+id/observeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#D32F2F"
+            android:text="Observe\nfrequency"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/frequencyLabel"
+            app:layout_constraintStart_toEndOf="@+id/doctorValue"
+            app:layout_constraintStart_toStartOf="@+id/doctorValue"
+            app:layout_constraintTop_toTopOf="@id/frequencyLabel" />
+
+        <!-- Life Saving Label -->
+
+        <!-- Life Saving Value -->
+        <TextView
+            android:id="@+id/lifeSavingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Is the\nmedication\nlife saving?"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/medNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/frequencyLabel" />
+
+        <TextView
+            android:id="@+id/lifeSavingValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Yes/no"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/doctorValue"
+            app:layout_constraintTop_toTopOf="@id/lifeSavingLabel" />
+
+        <!-- Eating Label -->
+
+        <!-- Eating Value -->
+
+        <TextView
+            android:id="@+id/eatingLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Before/after\neating?"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/medNameLabel"
+            app:layout_constraintTop_toBottomOf="@id/lifeSavingLabel" />
+
+        <TextView
+            android:id="@+id/eatingValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Before/\nafter/\nduring/no\ndifference"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/doctorValue"
+            app:layout_constraintTop_toTopOf="@id/eatingLabel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
