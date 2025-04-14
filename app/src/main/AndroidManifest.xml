@@ -40,7 +40,7 @@
             android:name=".ACTIVITIES.Allergens_screen4"
             android:exported="false" />
         <activity
-            android:name=".ACTIVITIES.signIn_screen_3"
+            android:name=".ACTIVITIES.signUp_screen_3"
             android:exported="false" />
         <activity
             android:name=".ACTIVITIES.Login_Screen_2"

@@ -11,6 +11,8 @@ import com.omer_h.repository.BASE.BaseRepository;
 import com.omer_h.repository.PersonalInfoRepository;
 import com.omer_h.viewmodel.BASE.BaseViewModel;
 
+import java.util.ArrayList;
+
 public class AllergenViewModel extends BaseViewModel<Allergen, Allergens> {
     private AllergenRepository repository;
 
@@ -20,7 +22,7 @@ public class AllergenViewModel extends BaseViewModel<Allergen, Allergens> {
 
     @Override
     protected BaseRepository<Allergen, Allergens> createRepository(Application application) {
-        repository=new AllergenRepository(application);
+        repository = new AllergenRepository(application);
         return repository;
     }
 }

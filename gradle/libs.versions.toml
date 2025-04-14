@@ -13,6 +13,9 @@ firebaseFirestore = "25.0.0"
 playServicesTasks = "18.2.0"
 playServicesTasksVersion = "18.0.2"
 securityCrypto = "1.0.0"
+volley = "1.2.1"
+retrofit = "2.9.0"
+ion = "1.9.4"
 
 [libraries]
 firebase-database = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabase" }
@@ -28,6 +31,10 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 play-services-tasks = { module = "com.google.android.gms:play-services-tasks", version.ref = "playServicesTasks" }
 play-services-tasks-v1802 = { module = "com.google.android.gms:play-services-tasks", version.ref = "playServicesTasksVersion" }
 security-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+volley = { module = "com.android.volley:volley", version.ref = "volley" }
+retrofit = {module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit"}
+amazon-ion = { group = "com.amazon.ion", name = "ion-java", version.ref = "ion" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

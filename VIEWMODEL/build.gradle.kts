@@ -29,7 +29,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.amazon.ion:ion-java:1.5.1")
     implementation(libs.play.services.tasks.v1802)
     implementation(libs.appcompat)
     implementation(libs.material)

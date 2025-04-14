@@ -11,8 +11,11 @@ public class AllergenRepository extends BaseRepository<Allergen, Allergens> {
     public AllergenRepository(Application application) {
         super(Allergen.class, Allergens.class, application);
     }
+
+
     @Override
     protected Query getQueryForExist(Allergen entity) {
-        return getCollection().whereEqualTo("name", entity.getName());
+        return getCollection().whereEqualTo("IdFs", entity.getIdFs());
     }
 }
+

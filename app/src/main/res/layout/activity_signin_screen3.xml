@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:id="@+id/main"
-android:background="@color/white"
-tools:context=".ACTIVITIES.Login_Screen_2">
+    android:background="@color/white"
+    tools:context=".ACTIVITIES.Login_Screen_2">
 
 <!-- חץ חזור -->
 
@@ -33,7 +33,7 @@ tools:context=".ACTIVITIES.Login_Screen_2">
             android:layout_height="59dp"
             android:layout_marginBottom="16dp"
             android:backgroundTint="@color/intenseRouge"
-            android:text="@string/common_signin_button_text"
+            android:text="Sign up"
             android:textColor="@android:color/white"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -49,7 +49,7 @@ tools:context=".ACTIVITIES.Login_Screen_2">
             android:layout_marginTop="12dp"
             android:layout_marginBottom="232dp"
             android:backgroundTint="@color/intenseRouge"
-            android:text="Add allergens"
+            android:text="Edit allergens"
             android:textColor="@android:color/white"
             android:textSize="12sp"
             android:textStyle="bold"
@@ -65,7 +65,7 @@ tools:context=".ACTIVITIES.Login_Screen_2">
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:paddingBottom="20dp"
-            android:text="Sign In"
+            android:text="Sign Up"
             android:textColor="@android:color/black"
             android:textSize="34sp"
             android:textStyle="bold"

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.omer_h.tashtit.R;
 
@@ -16,6 +17,7 @@ import com.omer_h.tashtit.ACTIVITIES.BASE.BaseActivity;
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     Button loginButton;
     Button signInButton;
+    TextView textViewResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,14 +29,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         initializeViews();
     }
+
+
 
     @Override
     protected void initializeViews() {
         loginButton = findViewById(R.id.btnLoginLogin);
         signInButton = findViewById(R.id.signInButton);
+        textViewResult = findViewById(R.id.textViewResult);
         setListeners();
     }
 
@@ -56,7 +60,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             startActivity(intent);
         }
         if(v==signInButton) {
-            Intent intent = new Intent(MainActivity.this, signIn_screen_3.class);
+            Intent intent = new Intent(MainActivity.this, signUp_screen_3.class);
             startActivity(intent);
         }
 

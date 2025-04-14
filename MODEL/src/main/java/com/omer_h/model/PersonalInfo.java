@@ -9,7 +9,7 @@ public class PersonalInfo extends BaseEntity implements Serializable {
     private String firstName;
     private String lastName;
     private long   birthDate;
-    private String allergens;
+    private Allergens allergens;
     private String emergencyNum;
     private String email;
     private String password;
@@ -18,7 +18,7 @@ public class PersonalInfo extends BaseEntity implements Serializable {
     public PersonalInfo() {
     }
 
-    public PersonalInfo(String firstName, String lastName, Long birthDate, String allergens, String emergencyNum, String email, String password) {
+    public PersonalInfo(String firstName, String lastName, Long birthDate, Allergens allergens, String emergencyNum, String email, String password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.birthDate = birthDate;
@@ -52,11 +52,11 @@ public class PersonalInfo extends BaseEntity implements Serializable {
         this.birthDate = birthDate;
     }
 
-    public String getAllergens() {
+    public Allergens getAllergens() {
         return allergens;
     }
 
-    public void setAllergens(String allergens) {
+    public void setAllergens(Allergens allergens) {
         this.allergens = allergens;
     }
 

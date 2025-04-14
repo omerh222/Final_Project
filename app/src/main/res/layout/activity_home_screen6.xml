@@ -10,8 +10,8 @@
     <!-- Burger Menu -->
     <ImageButton
         android:id="@+id/btnMenu"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
         android:layout_margin="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="4dp"
@@ -38,38 +38,12 @@
             <!-- Title -->
 
             <!-- RecyclerView for Medicine Items -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSearchBar"
-                android:layout_width="314dp"
-                android:layout_height="47dp"
-                android:layout_marginTop="28dp"
-                app:cardBackgroundColor="#FFFFFF"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <EditText
-                    android:id="@+id/etSearch"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@null"
-                    android:drawablePadding="8dp"
-                    android:hint="Search a medicine here"
-                    android:inputType="text"
-                    android:paddingStart="16dp"
-                    android:paddingEnd="16dp"
-                    android:textColorHint="#999999"
-                    android:textSize="14sp" />
-            </androidx.cardview.widget.CardView>
 
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
                 android:layout_marginEnd="24dp"
                 android:text="My mediwallet:"
                 android:textColor="#000000"
@@ -77,7 +51,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardSearchBar" />
+                tools:layout_editor_absoluteY="109dp" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvMedicines"
@@ -88,14 +62,14 @@
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="32dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintBottom_toTopOf="@+id/btnDelete"
+                app:layout_constraintBottom_toTopOf="@+id/ibDelete"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvTitle"
                 tools:itemCount="2" />
 
             <ImageButton
-                android:id="@+id/btnDelete"
+                android:id="@+id/ibDelete"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginStart="32dp"
@@ -107,35 +81,5 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageButton
-                android:id="@+id/btnSortUp"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="168dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:rotation="-90"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_arrow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnDelete"
-                app:layout_constraintTop_toBottomOf="@+id/rvMedicines"
-                app:tint="@color/intenseRouge" />
-
-            <ImageButton
-                android:id="@+id/btnSortDown"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="168dp"
-                android:layout_marginEnd="32dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:rotation="90"
-                android:scaleType="fitCenter"
-                android:src="@drawable/ic_arrow"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/btnDelete"
-                app:layout_constraintTop_toBottomOf="@+id/btnSortUp"
-                app:tint="@color/intenseRouge" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@ import com.omer_h.viewmodel.BASE.BaseViewModel;
 public class PersonalInfoViewModel extends BaseViewModel<PersonalInfo, PersonalInfos> {
     private PersonalInfoRepository repository;
 
-    public PersonalInfoViewModel(Class<PersonalInfo> tEntity, Class<PersonalInfos> tCollection, Application application) {
+    public PersonalInfoViewModel(Application application) {
         super(PersonalInfo.class, PersonalInfos.class, application);
     }
 

@@ -1,6 +1,5 @@
 package com.omer_h.tashtit.ACTIVITIES;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,13 +13,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.ViewModelProvider;
 
 import com.omer_h.helper.inputValidators.Rule;
 import com.omer_h.helper.inputValidators.RuleOperation;
 import com.omer_h.helper.inputValidators.Validator;
+import com.omer_h.model.Allergens;
+import com.omer_h.model.PersonalInfo;
 import com.omer_h.tashtit.R;
+import com.omer_h.viewmodel.PersonalInfoViewModel;
 
-public class signIn_screen_3 extends AppCompatActivity implements View.OnClickListener {
+public class signUp_screen_3 extends AppCompatActivity implements View.OnClickListener {
     EditText firstName;
     EditText lastName;
     EditText email;
@@ -30,7 +33,9 @@ public class signIn_screen_3 extends AppCompatActivity implements View.OnClickLi
     Spinner age;
     Button allergens;
     ImageButton backButton;
-    Button signInButton;
+    Button signUpButton;
+    PersonalInfo newUser;
+    PersonalInfoViewModel viewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +49,15 @@ public class signIn_screen_3 extends AppCompatActivity implements View.OnClickLi
         initializeViews();
         setListeners();
         setValidator();
+        setViewModel();
+        newUser = new PersonalInfo();
     }
 
-    private void initializeViews() {
+    private void setViewModel() {//set the view model that put the new users into the database
+        viewModel = new ViewModelProvider(this).get(PersonalInfoViewModel.class);
+    }
+
+    private void initializeViews() {//initialize the views
         firstName = findViewById(R.id.etFirstName);
         lastName = findViewById(R.id.etLastName);
         email = findViewById(R.id.etEmailSignIn);
@@ -56,14 +67,14 @@ public class signIn_screen_3 extends AppCompatActivity implements View.OnClickLi
         age = findViewById(R.id.spnnrAge);
         allergens = findViewById(R.id.btnAllergens);
         backButton = findViewById(R.id.btnBackSignIn);
-        signInButton = findViewById(R.id.btnSignInSignIn);
+        signUpButton = findViewById(R.id.btnSignInSignIn);
     }
 
-    private boolean validate() {
+    private boolean validate() {//checks that all the fields are filled
         return Validator.validate();
     }
 
-    private void setValidator() {
+    private void setValidator() {//checks that all the fields are filled
         Validator.add(new Rule(firstName, RuleOperation.REQUIRED, "Please enter your first name"));
         Validator.add(new Rule(lastName, RuleOperation.REQUIRED, "Please enter you last name"));
         Validator.add(new Rule(email, RuleOperation.REQUIRED, "Please enter your email"));
@@ -74,19 +85,37 @@ public class signIn_screen_3 extends AppCompatActivity implements View.OnClickLi
 
     private void setListeners() {
         backButton.setOnClickListener(this);
-        signInButton.setOnClickListener(this);
+        signUpButton.setOnClickListener(this);
+        allergens.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v==backButton){
+        if(v==backButton){//back to the main activity
             finish();
         }
-        if(v==signInButton){
+        if(v== signUpButton){//gets the allergens (if exist) from the allergen intent and adds it and the other personal details to the new user
             if(validate()){
-                Intent intent = new Intent(signIn_screen_3.this, Home_screen_6.class);
+                Intent allergenIntent = getIntent();
+                if(allergenIntent.hasExtra("Allergens")) {
+                    newUser.setAllergens((Allergens) allergenIntent.getSerializableExtra("Allergens"));
+                }
+                newUser.setFirstName(firstName.getText().toString());
+                newUser.setLastName(lastName.getText().toString());
+                newUser.setEmail(email.getText().toString());
+                newUser.setPassword(password.getText().toString());
+                newUser.setEmergencyNum(emergencyNumber.getText().toString());
+                newUser.setBirthDate(Long.parseLong(age.getSelectedItem().toString()));
+                viewModel.add(newUser);
+                //add entering the new data to the database
+                Intent intent = new Intent(signUp_screen_3.this, Login_Screen_2.class);
                 startActivity(intent);
             }
+        }
+        if(v==allergens){//starts the allergen activity
+            Intent intent = new Intent(signUp_screen_3.this, Allergens_screen4.class);
+            intent.putExtra("userIdFs", newUser.getIdFs());
+            startActivity(intent);
         }
     }
 }

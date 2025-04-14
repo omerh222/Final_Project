@@ -49,20 +49,20 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/btnSortUp"
+                android:id="@+id/ibUp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:rotation="-90"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_arrow"
-                app:layout_constraintBottom_toTopOf="@+id/btnSortDown"
-                app:layout_constraintEnd_toEndOf="@+id/btnSortDown"
-                app:layout_constraintStart_toStartOf="@+id/btnSortDown"
+                app:layout_constraintBottom_toTopOf="@+id/ibBurger"
+                app:layout_constraintEnd_toEndOf="@+id/ibBurger"
+                app:layout_constraintStart_toStartOf="@+id/ibBurger"
                 app:tint="@color/intenseRouge" />
 
             <ImageButton
-                android:id="@+id/btnSortDown"
+                android:id="@+id/ibBurger"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="36dp"
@@ -82,7 +82,7 @@
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp"
-                app:layout_constraintBottom_toTopOf="@+id/btnSortUp"
+                app:layout_constraintBottom_toTopOf="@+id/ibUp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/titleText" />

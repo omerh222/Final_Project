@@ -61,7 +61,7 @@
             android:layout_marginTop="12dp"
             android:layout_marginBottom="232dp"
             android:backgroundTint="@color/intenseRouge"
-            android:text="Add allergens"
+            android:text="Edit Allergens"
             android:textColor="@android:color/white"
             android:textSize="12sp"
             android:textStyle="bold"

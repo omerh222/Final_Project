@@ -16,6 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.omer_h.helper.inputValidators.Rule;
 import com.omer_h.helper.inputValidators.RuleOperation;
 import com.omer_h.helper.inputValidators.Validator;
+import com.omer_h.model.PersonalInfo;
 import com.omer_h.tashtit.R;
 
 public class Login_Screen_2 extends AppCompatActivity implements View.OnClickListener {
@@ -23,6 +24,7 @@ public class Login_Screen_2 extends AppCompatActivity implements View.OnClickLis
     ImageButton backButtonLogin;
     EditText etEmail;
     EditText etPassword;
+    PersonalInfo savedInfo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +55,7 @@ public class Login_Screen_2 extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         if(v==loginButton)
-            if(validate())
+            if(validate())//add comparing data to the data in database
             {
                 Intent intent = new Intent(Login_Screen_2.this, Home_screen_6.class);
                 startActivity(intent);

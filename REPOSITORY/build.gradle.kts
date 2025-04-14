@@ -30,7 +30,7 @@ android {
 }
 
 dependencies {
-
+    implementation ("com.amazon.ion:ion-java:1.5.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.firebase.firestore)
